@@ -30,7 +30,8 @@ pub fn remove_slurs(test: &str) -> String {
 }
 
 pub(crate) fn slur_check(test: &str) -> Result<(), Vec<&str>> {
-  let mut matches: Vec<&str> = SLUR_REGEX.find_iter(test).map(|mat| mat.as_str()).collect();
+  Ok(())
+/*   let mut matches: Vec<&str> = SLUR_REGEX.find_iter(test).map(|mat| mat.as_str()).collect();
 
   // Unique
   matches.sort_unstable();
@@ -40,7 +41,7 @@ pub(crate) fn slur_check(test: &str) -> Result<(), Vec<&str>> {
     Ok(())
   } else {
     Err(matches)
-  }
+  } */
 }
 
 pub fn check_slurs(text: &str) -> Result<(), ApiError> {
